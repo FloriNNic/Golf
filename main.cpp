@@ -65,14 +65,16 @@ void f(char h, char w)
         if (lovit!="")
             cupaCurenta[x]++;
 
-        if (cupaCurenta[x]>c&&cupaCurenta[!x]<=c)
-            winner = x;
-
-        if (cupaCurenta[x]>c&&cupaCurenta[!x]>c) {
-            printf("Jocul s-a incheiat. ");
-            if (t[x] == t[!x])
-                printf("Egalitate\n");
-            else printf("A castigat jucatorul %d cu %d lovituri\n",winner+1,t[winner]);
+        if (cupaCurenta[x]>c){
+            if (cupaCurenta[!x]<=c)
+                winner = x;
+        
+            else {
+                printf("Jocul s-a incheiat. ");
+                if (t[x] == t[!x])
+                    printf("Egalitate\n");
+                else printf("A castigat jucatorul %d cu %d lovituri\n",winner+1,t[winner]);
+            }
         }
         x = !x;
     }

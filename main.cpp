@@ -29,8 +29,8 @@ void f(char h, char w)
     static int pozitieCurenta[2][2] = {{1,1},{1,1}};
     string lovit = "";
     static int x =0,
-    t[2] = {0,0};
-    int winner;
+    t[2] = {0,0},
+    winner = x;
 
     if(g++==0){
         cupaCurenta[0]=cupaCurenta[1]=pozitieCurenta[0][0]=pozitieCurenta[0][1] = pozitieCurenta[1][0] = pozitieCurenta[1][1]= 1;
